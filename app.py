@@ -10,5 +10,7 @@ def detect_digit(img):
   pred = np.argmax(pred_logit)
   return pred
 
-app = gr.Interface(fn=detect_digit, inputs='image', outputs='label')
+app = gr.Interface(fn=detect_digit, inputs='image', outputs='label',
+                   title="Digit Detection",
+                   description="Who needs a description")
 app.launch()
